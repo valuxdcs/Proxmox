@@ -1,54 +1,56 @@
-# Proxmox VM Backup Wiki
+# Proxmox VM Wiki
 
-Ce wiki fournit des informations sur la configuration et la gestion d'un système de sauvegarde pour les machines virtuelles (VM) créées par les utilisateurs dans Proxmox, en utilisant un NAS comme stockage de sauvegarde.
+Ce wiki fournit des informations sur la configuration et la gestion d'un système de sauvegarde pour les machines virtuelles (VM) créées par les utilisateurs dans Proxmox.
 
 ## Table des matières
 
-- [Prérequis](#prérequis)
-- [Configuration du NAS](#configuration-du-nas)
-- [Connexion du NAS à Proxmox](#connexion-du-nas-à-proxmox)
-- [Planification des sauvegardes des VM](#planification-des-sauvegardes-des-vm)
-- [Test de la configuration de sauvegarde](#test-de-la-configuration-de-sauvegarde)
-- [Restauration des VM à partir des sauvegardes](#restauration-des-vm-à-partir-des-sauvegardes)
-- [Maintenance et surveillance du système de sauvegarde](#maintenance-et-surveillance-du-système-de-sauvegarde)
-- [Formation des utilisateurs et mise en place de politiques de sauvegarde et de restauration](#formation-des-utilisateurs-et-mise-en-place-de-politiques-de-sauvegarde-et-de-restauration)
+- [Cahier des charges](#cahier-des-charges)
+- [Configuration Proxmox](#configuration-proxmox)
+- [Documentation et formation](#documentation-et-formation)
 
-## Prérequis
+## Cahier des charges
 
-- Proxmox VE installé et configuré
-- Un NAS compatible avec Proxmox (NFS, SMB/CIFS, iSCSI, etc.)
+1. Mise en place d'un serveur Proxmox VE
+2. Création de comptes utilisateurs avec des droits limités pour créer des VM
+3. Configuration d'un système de sauvegarde pour les VM créées par les utilisateurs
+4. Restauration des VM à partir des sauvegardes
+5. Maintenance et surveillance du système de sauvegarde
+6. Formation des utilisateurs sur la gestion des sauvegardes
+7. Mise en place de politiques de sauvegarde et de restauration
 
-## Configuration du NAS
+## Configuration Proxmox
 
-1. Assurez-vous que votre NAS est configuré correctement...
-...
+1. Installation et configuration de base de Proxmox VE
+   - Téléchargez l'ISO de Proxmox VE
+   - Installez Proxmox VE sur votre serveur
+   - Configurez votre réseau et l'accès Web
+   - Mettez à jour Proxmox VE
+   - Configurez les certificats SSL pour sécuriser l'accès Web
 
-## Connexion du NAS à Proxmox
+2. Création de comptes utilisateurs avec des droits limités
+   - Accédez à l'interface Web de Proxmox
+   - Créez des groupes pour les utilisateurs
+   - Configurez les autorisations pour les groupes
+   - Créez des utilisateurs et attribuez-les aux groupes appropriés
 
-1. Accédez à l'interface Web de Proxmox...
-...
+3. Configuration d'un système de sauvegarde pour les VM
+   - Configurez le stockage pour les sauvegardes
+   - Planifiez des sauvegardes pour les VM
+   - Testez la configuration de sauvegarde
 
-## Planification des sauvegardes des VM
+## Documentation et formation
 
-1. Accédez à l'interface Web de Proxmox...
-...
+1. Fournir une documentation aux utilisateurs sur la manière de gérer les sauvegardes des VM
+   - Comment vérifier les journaux de sauvegarde
+   - Comment lancer une sauvegarde manuelle de leurs VM
+   - Comment restaurer une VM à partir d'une sauvegarde
 
-## Test de la configuration de sauvegarde
+2. Organiser des ateliers ou des formations pour les utilisateurs
+   - Montrez-leur comment créer et gérer des VM
+   - Expliquez-leur comment surveiller l'état de leurs sauvegardes
+   - Familiarisez-les avec les politiques de sauvegarde et de restauration
 
-1. Pour vérifier que la sauvegarde est correctement configurée...
-...
-
-## Restauration des VM à partir des sauvegardes
-
-1. Pour restaurer une VM à partir d'une sauvegarde...
-...
-
-## Maintenance et surveillance du système de sauvegarde
-
-1. Surveillez régulièrement les journaux de sauvegarde...
-...
-
-## Formation des utilisateurs et mise en place de politiques de sauvegarde et de restauration
-
-1. Communiquez avec les utilisateurs pour les informer...
-...
+3. Élaborer et mettre en place des politiques de sauvegarde et de restauration
+   - Informez les utilisateurs sur la fréquence des sauvegardes
+   - Définissez les responsabilités des utilisateurs en matière de sauvegarde et de restauration
+   - Établissez des procédures en cas d'incident ou de perte de données
